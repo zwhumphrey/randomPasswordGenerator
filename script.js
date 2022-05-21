@@ -3,6 +3,8 @@
 function generatePassword() {
     console.log("Button clicked")
     
+//
+
   // 1.prompt user for passwrod criteria
       //a. password lenght between 8-128 
   
@@ -24,13 +26,12 @@ function generatePassword() {
     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
   }
   console.log(num());
-          
-         
-  
-  
+        
       //e. special characters
-  
-  
+  function specialCharacters(){
+    return String.fromCharCode(Math.floor(Math.random() * 15) + 33);
+  }
+  console.log(specialCharacters());
    
   //2. validate the input.
   //3. generate password based on critreria
