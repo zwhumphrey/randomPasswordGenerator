@@ -13,7 +13,11 @@ function generatePassword() {
   console.log(lowerCase());
   
       //c. uppercase
-  
+  function upperCase(){
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+  }
+  console.log(upperCase());
+      
     
       //d. numbers
   
