@@ -3,51 +3,41 @@
 function generatePassword() {
     console.log("Button clicked")
     
-//
 
-  // 1.prompt user for passwrod criteria
+  // 1.prompt user for password criteria
+
+}
+
       //a. password lenght between 8-128 
+
+
   
-      //b. lower case
-  function lowerCase(){
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-  }
-  console.log(lowerCase());
-  
-      //c. uppercase
-  function upperCase(){
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-  }
-  console.log(upperCase());
+      //b. lower case, upper case, number, special characters.
+      var lowerCaseArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",];
+      var upperCaseArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
+      var numberArr = ["0","1","2","3","4","5","6","7","8","9"];
+      var specialCharArr = ["!","@","#","$","%","^","&","*","(",")","<",">","/","?","+","]","[","|","`","~"];
       
-    
-      //d. numbers
-  function num(){
-    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-  }
-  console.log(num());
-        
-      //e. special characters
-  function specialCharacters(){
-    return String.fromCharCode(Math.floor(Math.random() * 15) + 33);
-  }
-  console.log(specialCharacters());
    
   //2. validate the input.
-  //3. generate password based on critreria
-  
-  
-  
-  //4. display password
-    return "Generated Password here!";
-  
+
+  function generatePassword() {
+    // generate password based on prompts
+
   }
+  
+
+ 
+  //4. display password
+
+
   
   // Get references to the #generate element
   var generateBtn = document.querySelector("#generate");
   
   // Write password to the #password input
   function writePassword() {
+    getPrompts();
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
   
