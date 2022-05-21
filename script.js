@@ -20,7 +20,12 @@ function generatePassword() {
       
     
       //d. numbers
-  
+  function num(){
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+  }
+  console.log(num());
+          
+         
   
   
       //e. special characters
