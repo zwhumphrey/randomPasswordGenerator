@@ -1,12 +1,9 @@
 // Assignment code here
 
-function generatePassword() {
-    console.log("Button clicked")
-    
 
   // 1.prompt user for password criteria
 
-}
+
 
       //a. password lenght between 8-128 
 
@@ -23,6 +20,12 @@ function generatePassword() {
 
   function generatePassword() {
     // generate password based on prompts
+    var password = "";
+    for(var i = 0; i < passwordLength; i++){
+      var randomcombo = Math.floor(Math.random() * choiceArr.length);
+      password = password + choiceArr[randomcombo];
+    }
+    return password;
 
   }
   
@@ -37,12 +40,13 @@ function generatePassword() {
   
   // Write password to the #password input
   function writePassword() {
-    getPrompts();
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-  
-    passwordText.value = password;
-  
+    var correctprompts = getPrompts();
+
+    if(correctprompts) {
+      var password = generatePassword();
+      var passwordText = document.querySelector("#password");
+      passwordText.value = password;
+   }
   }
   
   // Add event listener to generate button
